@@ -1,0 +1,11 @@
+import time
+def Timer(Chub):
+    while Chub:
+        mins, secs = divmod(Chub, 60)
+        timer="{:02d}:{:02d}".format(mins, secs)
+        print(timer, end="\r")
+        time.sleep(1)
+        Chub-=1
+    print("Done")
+Chub=input("Number of seconds: ")
+Timer(int(Chub))
